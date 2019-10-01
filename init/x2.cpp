@@ -136,4 +136,10 @@ void vendor_load_properties()
     {
         setRMX(0); //RMX1991
     }
+
+    // Evolution-X
+    property_override("org.evolution.build_donate_url", "https://t.me/CannedShroudTed");
+    property_override("org.evolution.build_maintainer", "CannedShroud");
+    property_override("org.evolution.build_support_url", "https://t.me/EvolutionXX2");
+
 }

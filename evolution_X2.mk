@@ -7,6 +7,7 @@
 $(call inherit-product, device/realme/X2/device.mk)
 
 # Inherit some common Evolution X stuff.
+EVO_BUILD_TYPE := OFFICIAL
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 WITH_GAPPS := true
