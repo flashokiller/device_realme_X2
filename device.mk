@@ -53,9 +53,10 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_platform_info_oppo_19771.xml:system/etc/audio_platform_info_oppo_19771.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_19771.xml:system/etc/mixer_paths_19771.xml
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_platform_info_oppo_19771.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_platform_info_oppo_19771.xml \
+    $(LOCAL_PATH)/audio/mixer_paths_19771.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/mixer_paths_19771.xml
+
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -116,7 +117,7 @@ PRODUCT_COPY_FILES += \
 
 # TEMP-HOSTPAD
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/hostapd:system/bin/hw/hostapd
+    $(LOCAL_PATH)/configs/hostapd:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin/hw/hostapd
 
 # IMS
 PRODUCT_PACKAGES += \
