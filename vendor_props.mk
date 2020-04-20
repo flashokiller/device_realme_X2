@@ -1,3 +1,7 @@
+# Charger
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.charger.enable_suspend=true
+
 # Offsets
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.use_phase_offsets_as_durations=1 \
