@@ -123,6 +123,16 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml
 
+# HWBinder
+ PRODUCT_PACKAGES += \
+    libhwbinder \
+    libhwbinder.vendor
+
+# HIDLtransport
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhidltransport.vendor
+
 # Apn Config
 PRODUCT_COPY_FILES += \
     $(PREBUILT_DVC_PATH)/Configs/apns-conf.xml:system/etc/apns-conf.xml
