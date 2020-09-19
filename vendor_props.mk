@@ -12,6 +12,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000
 
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    dev.pm.dyn_samplingrate=1 \
+    persist.front.skipdisplay.enable=1
+
 #lmkd options
 PRODUCT_PRODUCT_PROPERTIES += \
 	ro.config.low_ram=false \
