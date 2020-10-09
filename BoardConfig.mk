@@ -143,6 +143,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
     $(DEVICE_PATH)/sepolicy/private
+include device/qcom/sepolicy/SEPolicy.mk
 
 # System-as-root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
