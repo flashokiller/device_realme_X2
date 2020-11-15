@@ -15,4 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_X2.mk
+    $(LOCAL_DIR)/octavi_X2.mk
+
+COMMON_LUNCH_CHOICES := \
+    octavi_X2-eng \
+    octavi_X2-user \
+    octavi_X2-userdebug

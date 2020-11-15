@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, vendor/realme/X2/X2-vendor.mk)
 
 # Prebuilts Path
-PREBUILT_DVC_PATH := device/realme/X2/prebuilts
+PREBUILT_DVC_PATH := device/realme/X2-prebuilts
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
@@ -32,7 +32,7 @@ TARGET_LMKD_STATS_LOG := true
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-awaken
+    $(LOCAL_PATH)/overlay-octavi
 
 # Properties
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
@@ -95,9 +95,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
-# Lineage Specific perms
+# Octavi Specific perms
 PRODUCT_COPY_FILES += \
-    vendor/awaken/prebuilt/common/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+        vendor/octavi/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:vendor/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # HIDL
 PRODUCT_PACKAGES += \
