@@ -6,6 +6,7 @@
 
 # Inherit some common Octavi stuff.
 $(call inherit-product,vendor/octavi/config/common.mk)
+OCTAVI_BUILD_TYPE := Official
 
 # Setup Gapps options
 IS_PHONE := true
@@ -17,7 +18,7 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := false
 $(call inherit-product, device/realme/X2/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := awaken_X2
+PRODUCT_NAME := octavi_X2
 PRODUCT_DEVICE := X2
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme X2
