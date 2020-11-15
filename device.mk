@@ -223,10 +223,6 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
-# Touch
-PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.x2
-
 # Offline charger
 PRODUCT_PACKAGES += \
     charger_res_images \
