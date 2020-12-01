@@ -1,0 +1,1 @@
+allow bootloader_boot_reason_prop bootloader_boot_reason_prop:file { getattr };

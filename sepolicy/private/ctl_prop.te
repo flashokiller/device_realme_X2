@@ -1,0 +1,11 @@
+# adbd
+allow ctl_adbd_prop ctl_adbd_prop:file { map };
+
+# apexd
+allow ctl_apexd_prop ctl_apexd_prop:file { getattr  open };
+
+# netmgrd
+allow ctl_netmgrd_prop ctl_netmgrd_prop:file { map };
+
+# port-bridge
+allow ctl_port-bridge_prop ctl_port-bridge_prop:file { open };

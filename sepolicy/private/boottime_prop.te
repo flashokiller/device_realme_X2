@@ -1,0 +1,1 @@
+allow boottime_public_prop boottime_public_prop:file { getattr };

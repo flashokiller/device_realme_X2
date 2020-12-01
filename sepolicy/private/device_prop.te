@@ -1,0 +1,6 @@
+# logging
+allow device_logging_prop device_logging_prop:file { map };
+
+# dumpstate
+allow dumpstate_options_prop dumpstate_options_prop:file { open };
+
