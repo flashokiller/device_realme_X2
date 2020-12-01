@@ -14,6 +14,7 @@ WITH_GAPPS := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+EXTRA_FOD_ANIMATIONS := true
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
