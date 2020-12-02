@@ -1,0 +1,2 @@
+type audio_socket, file_type;
+#allow hal_audio_default sysfs:dir {read};

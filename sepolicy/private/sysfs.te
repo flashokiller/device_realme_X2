@@ -1,0 +1,2 @@
+allow proc proc:file { read  setattr };
+allow hal_light_x2 sysfs_graphics:dir {search};

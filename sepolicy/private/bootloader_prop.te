@@ -1,1 +1,3 @@
 allow bootloader_boot_reason_prop bootloader_boot_reason_prop:file { getattr };
+allow adbd_prop adbd_prop:file { map };
+allow boottime_public_prop boottime_public_prop:file { getattr };

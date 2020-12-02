@@ -5,3 +5,32 @@ type persist_file, file_type;
 
 # system
 allow system_file system_file:file { execute_no_trans };
+allow cache_file cache_file:dir { getattr  search };
+allow system_file system_file:file { read };
+
+type display_data_file, data_file_type, core_data_file_type, file_type;
+type pps_socket, file_type;
+type sysfs_call_status, sysfs_type, fs_type;
+type sysfs_wifi, sysfs_type, fs_type;
+type sysfs_kgsl, sysfs_type, fs_type;
+type sysfs_graphics, sysfs_type, fs_type;
+
+type debugfs_ipc, debugfs_type, fs_type;
+
+type diag_device, dev_type, mlstrustedobject;
+
+type oppo_block_device, dev_type;
+
+type fingerprint_data_file, data_file_type, file_type;
+
+type persist_audio_file, file_type, vendor_persist_type;
+
+type vendor_tombstone_data_file, file_type, data_file_type;
+
+type debugfs_wlan, debugfs_type, fs_type;
+
+type qti_init_shell, domain;
+
+type ssgtzd, domain;
+
+type hal_imsrcsd_hwservice, hwservice_manager_type;

@@ -1,1 +1,5 @@
 allow init init:netlink_generic_socket { bind  create  read  setopt  write };
+allow system_app sysfs_kgsl:lnk_file read;
+allow init firmware_file:filesystem {getattr};
+allow init bt_firmware_file:filesystem {getattr};
+allow init vendor_file:file {mounton};

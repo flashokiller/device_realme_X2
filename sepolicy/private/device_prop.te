@@ -4,3 +4,7 @@ allow device_logging_prop device_logging_prop:file { map };
 # dumpstate
 allow dumpstate_options_prop dumpstate_options_prop:file { open };
 
+allow default_prop default_prop:file { read };
+allow default_prop default_prop:property_service { set };
+allow block_device block_device:dir { search };
+allow device device:chr_file { read };

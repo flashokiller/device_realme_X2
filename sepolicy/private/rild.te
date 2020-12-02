@@ -1,0 +1,9 @@
+#allow rild default_prop:file{read};
+
+#allow rild default_prop:property_service {set};
+
+#allow rild system_prop:property_service{set};
+
+#allow rild cache_file:dir {search getattr};
+
+#allow rild block_device:dir {search};
