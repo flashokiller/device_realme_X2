@@ -34,3 +34,9 @@ type qti_init_shell, domain;
 type ssgtzd, domain;
 
 type hal_imsrcsd_hwservice, hwservice_manager_type;
+
+type vendor_bt_data_file, file_type, data_file_type;
+
+type netmgrd, domain;
+
+type tlocd, domain;

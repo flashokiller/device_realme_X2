@@ -1,0 +1,1 @@
+allow tlocd device:chr_file {read write};

@@ -16,4 +16,4 @@ type hal_light_x2_exec, exec_type, file_type;
 init_daemon_domain(hal_light_x2)
 
 allow hal_light_x2 sysfs_leds:dir r_dir_perms;
-allow hal_light_x2 sysfs_graphics:file {read write open};
+allow hal_light_x2 sysfs_graphics:file {read write open getattr};

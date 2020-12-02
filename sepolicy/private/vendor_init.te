@@ -15,5 +15,5 @@ allow vendor_overlay_file vendor_overlay_file:file { read };
 allow vendor_init default_prop:file{read};
 allow vendor_init persist_debug_prop:file {read};
 allow vendor_init oppo_block_device:blk_file {setattr};
-allow vendor_init tombstone_data_file:dir {getattr};
+#allow vendor_init tombstone_data_file:dir {getattr};
 allow vendor_init default_prop:property_service {set}; 
