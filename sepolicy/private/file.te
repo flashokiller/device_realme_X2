@@ -40,3 +40,11 @@ type vendor_bt_data_file, file_type, data_file_type;
 type netmgrd, domain;
 
 type tlocd, domain;
+
+type ipacm-diag_prop, property_type;
+
+type ipacm_prop, property_type;
+
+type hal_fingerprint_oppo, domain;
+
+type sysfs_graphics_ffl, sysfs_type, fs_type;
