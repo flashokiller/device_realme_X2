@@ -1,0 +1,10 @@
+
+allow init bt_firmware_file:filesystem {getattr};
+allow init firmware_file:filesystem {getattr};
+allow init hal_fingerprint_oppo:binder {call};
+allow init init:netlink_generic_socket { bind  create  read  setopt  write };
+allow init system_file:file {execute_no_trans};
+allow init sysfs_graphics_ffl:file {write open};
+allow init system_server:binder {call};
+allow init vendor_file:file {mounton};
+allow init vendor_configs_file:file {mounton};
