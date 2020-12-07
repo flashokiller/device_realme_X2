@@ -1,0 +1,2 @@
+get_prop(flags_health_check, adsprpc_prop)
+get_prop(flags_health_check, apexd_prop)
