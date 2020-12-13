@@ -1,2 +1,2 @@
 allow platform_app vendor_default_prop:file {open getattr map};
-allow platform_app init:binder call;
+allow platform_app init:binder {call transfer};

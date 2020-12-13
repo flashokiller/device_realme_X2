@@ -1,0 +1,3 @@
+type ssgtzd, domain;
+
+allow ssgtzd device:chr_file {read write open ioctl};

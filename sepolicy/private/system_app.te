@@ -1,0 +1,3 @@
+allow system_app init:binder call;
+allow system_app proc:file {write open getattr};
+allow system_app sysfs_usb_supply:file write;

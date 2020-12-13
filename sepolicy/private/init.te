@@ -1,9 +1,19 @@
 allow init vendor_configs_file:dir {mounton};
 
 allow init bt_firmware_file:filesystem getattr;
+allow init bpfloader:bpf prog_run;
 allow init firmware_file:filesystem getattr;
+allow init fs_bpf:file write;
 allow init hal_fingerprint_oppo:binder {call transfer};
-allow init init:netlink_generic_socket {create bind setopt write};
+allow init init:netlink_generic_socket {create bind setopt write read};
+allow init init:rawip_socket {setopt create getopt};
+allow init netutils_wrapper_exec:file {execute read open};
 allow init system_server:binder call;
 allow init system_file:file execute_no_trans;
 allow init sysfs_graphics:file {read open write};
+allow init sysfs_graphics_ffl:file {write open};
+allow init proc:file write;
+
+allow init vendor_file:file mounton;
+allow init vendor_overlay_file:dir mounton;
+allow init vendor_configs_file:file mounton;

@@ -1,0 +1,6 @@
+type qti_init_shell, domain;
+
+allow qti_init_shell sysfs_io_sched_tuneable:file write;
+allow qti_init_shell qti_init_shell:capability dac_override;
+allow qti_init_shell default_prop:file {read open getattr map};
+allow qti_init_shell sysfs:file write;
