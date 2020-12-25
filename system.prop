@@ -61,8 +61,8 @@ dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.image-dex2oat-filter=quicken
 dalvik.vm.image-dex2oat-threads=8
 
-#Display
-ro.sf.lcd_density=400
+# Display 
+ro.sf.lcd_density=460
 
 # Display post-processing
 debug.cpurend.vsync=false
