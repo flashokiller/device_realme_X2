@@ -65,6 +65,7 @@ dalvik.vm.image-dex2oat-threads=8
 ro.sf.lcd_density=400
 
 # Display post-processing
+debug.cpurend.vsync=false
 debug.sf.latch_unsignaled=1
 debug.sf.hw=1
 debug.sf.enable_gl_backpressure=1
