@@ -74,15 +74,6 @@ void property_override(char const prop[], char const value[], bool add = true)
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void property_override_multifp(char const buildfp[], char const systemfp[],
-	char const bootimagefp[], char const vendorfp[], char const value[])
-{
-	property_override(buildfp, value);
-	property_override(systemfp, value);
-	property_override(bootimagefp, value);
-	property_override(vendorfp, value);
-}
-
 // Decommonise nfc properties
 void load_nfc_props()
 {
@@ -99,6 +90,7 @@ void setRMX(const unsigned int variant)
 
     //RMX1991
     prop[0] = {
+        "realme/RMX1991/RMX1991CN:10/QKQ1.191201.002/1594368018:user/release-keys",
         "unknown-user 10 QKQ1.191201.002 eng.root.20200902.174625 release-keys",
         "RMX1991",
         "RMX1991CN",
@@ -107,6 +99,7 @@ void setRMX(const unsigned int variant)
 
     //RMX992
     prop[1] = {
+        "realme/RMX1992/RMX1992L1:10/QKQ1.191201.002/1597316082:user/release-keys",
         "unknown-user 10 QKQ1.191201.002 eng.root.20200907.215416 release-keys",
         "RMX1992",
         "RMX1992L1",
@@ -115,6 +108,7 @@ void setRMX(const unsigned int variant)
 
     //RMX1993
     prop[2] = {
+        "realme/RMX1993EEA/RMX1993L1:10/QKQ1.191201.002/1594368018:user/release-keys",
         "unknown-user 10 QKQ1.191201.002 eng.root.20200820.184008 release-keys",
         "RMX1993",
         "RMX1993L1",
@@ -136,6 +130,7 @@ void setRMX(const unsigned int variant)
     property_override("ro.build.product", prop[variant].product_device.c_str());
     for (const auto &source : ro_props_default_source_order)
     {
+        set_ro_build_prop(source, "fingerprint", prop[variant].build_description.c_str());
         set_ro_product_prop(source, "device", prop[variant].product_device.c_str());
         set_ro_product_prop(source, "model", prop[variant].device_build.c_str());
         set_ro_product_prop(source, "name", prop[variant].device_build.c_str());
@@ -144,10 +139,13 @@ void setRMX(const unsigned int variant)
     // All 3 variants get upadates at different time so let's handle it here.
     property_override("ro.build.version.security_patch", prop[variant].device_spl.c_str());
 
-    // RMX1993 has different ptoduct name due to oversea variants further being divided into spain and europe
+    // RMX1993 has different product name due to oversea variants further being divided into spain and europe
     if (variant == 2)
         for (const auto &source : ro_props_default_source_order)
             set_ro_product_prop(source, "name", "RMX1993EEA"); //override name props again
+
+    //override again to be sure that it gets set.
+    property_override("ro.build.fingerprint", prop[variant].build_description.c_str(), false);
 
     // Load NFC properties only on RMX199{1:3}
     if (variant == 2 || variant == 0)
@@ -173,7 +171,5 @@ void vendor_load_properties()
     property_override("org.evolution.build_donate_url", "https://t.me/CannedShroudTed");
     property_override("org.evolution.build_maintainer", "CannedShroud");
     property_override("org.evolution.build_support_url", "https://t.me/EvolutionXX2");
-	property_override_multifp("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.bootimage.build.fingerprint",
-	    "ro.vendor.build.fingerprint", "google/redfin/redfin:11/RQ1A.201205.010/6953398:user/release-keys");
 }
 
