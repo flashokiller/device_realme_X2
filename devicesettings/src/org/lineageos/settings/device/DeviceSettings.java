@@ -70,6 +70,7 @@ public class DeviceSettings extends PreferenceFragment
     private static TwoStatePreference mOTGModeSwitch;
     private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mSmartChargingSwitch;
+    public static  TwoStatePreference mResetStats;
     public static SeekBarPreference mSeekBarPreference;
 
     @Override
