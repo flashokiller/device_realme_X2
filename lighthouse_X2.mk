@@ -8,6 +8,8 @@ $(call inherit-product, device/realme/X2/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lighthouse/config/common_full_phone.mk)
+LIGHTHOUSE_BUILD_TYPE := OFFICIAL
+TARGET_USES_AOSP_CHARGER := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lighthouse_X2
