@@ -1179,5 +1179,7 @@
     <!-- Whether device needs to force sec patch -->
     <bool name="config_needsCustomPatch">true</bool>
 
+    <!-- Whether device has VOOC charging support -->
+    <bool name="config_hasVoocCharger">true</bool>
 
 </resources>
